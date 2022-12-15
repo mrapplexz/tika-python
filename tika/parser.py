@@ -130,8 +130,8 @@ def _parse(output, service='all'):
                 else:
                     parsed["metadata"][n] = js[n]
 
-                if n == "embeddedRelationshipId" and n["embeddedRelationshipId"]:
-                    embeddedFile.append(n["embeddedRelationshipId"])
+                if n == "embeddedRelationshipId" and js["embeddedRelationshipId"]:
+                    embeddedFile.append(js["embeddedRelationshipId"])
 
     if embeddedFile:
         log.info("Embedded files {}", embeddedFile)
